@@ -77,8 +77,8 @@ const DOM = {
 
     innerHTMLTransaction(transaction, index) {
         const CSSclass = transaction.amount > 0 ? "income" : "expense"
-
-        const amount = Utils.formatCurrency(transaction.amount)
+        
+        const amount = Utils.formatCurrency(transaction.amount)       
 
         const html = `    
             <td class="description">${transaction.description}</td>
@@ -88,7 +88,6 @@ const DOM = {
                 <img src="./assets/minus.svg" onclick="Transaction.remove(${index})" alt="Remover transação">
             </td>    
         `
-
         return html
     },
 
@@ -104,8 +103,8 @@ const DOM = {
 }
 
 const Utils = {
-    formatAmount(value) {
-        return Number(value) * 100;
+    formatAmount(value) {        
+        return Math.round(Number(value) * 100);
     },
 
     formatDate(date) {
@@ -123,7 +122,7 @@ const Utils = {
 
         value = value.toLocaleString("pt-BR", {
             style: "currency",
-            currency: "BRL"
+            currency: "BRL",
         })
 
         return signal + " " + value        
