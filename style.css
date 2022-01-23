@@ -76,7 +76,6 @@ button:hover {
     margin-bottom: .8rem;
 }
 
-
 .button.cancel {
     color: var(--red);
     border: 2px solid var(--red);
@@ -259,16 +258,11 @@ input {
     gap: 1rem;
 }
 
-.input-group.actions a {
-    
-}
 .input-group.actions .button, 
 .input-group.actions button {
     flex: 1;
     text-align: center;    
 }
-
-
 
 /* Footer =================== */
 footer {
@@ -288,7 +282,6 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-    }
+    }    
 
 }
-
